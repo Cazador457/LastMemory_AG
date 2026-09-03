@@ -3,9 +3,49 @@
     "name": "RavenInputActions",
     "maps": [
         {
-            "name": "Rav",
+            "name": "Raven",
             "id": "947b6f1c-4ca7-43ba-95b9-c333149209d2",
             "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "71450f80-de3f-49b8-8c81-48dc11e2059f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "4e3040f1-ea50-402a-aefa-ac65f0c4a053",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "fb8f931c-6487-4821-b462-de9d3ef1746f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "be773291-a526-4699-b4e1-ebdac52c06ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
                 {
                     "name": "Attack",
                     "type": "Button",
@@ -34,46 +74,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "be773291-a526-4699-b4e1-ebdac52c06ff",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "71450f80-de3f-49b8-8c81-48dc11e2059f",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true,
-                    "priority": 0
-                },
-                {
-                    "name": "Spring",
-                    "type": "Button",
-                    "id": "fb8f931c-6487-4821-b462-de9d3ef1746f",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
-                    "priority": 0
-                },
-                {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "4e3040f1-ea50-402a-aefa-ac65f0c4a053",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true,
                     "priority": 0
                 }
             ],
@@ -228,7 +228,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardMouse",
-                    "action": "Spring",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
