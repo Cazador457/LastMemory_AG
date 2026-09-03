@@ -3,38 +3,34 @@ using UnityEngine.InputSystem;
 
 public class Combat : MonoBehaviour
 {
-    //
-    private RavenInputActions inputActions;
-
-    //
-    public float damage = 5;
-    public float speed = 5;
-    public float defence = 9;
-    public int nockBack = 2;
-
+    private RavenInputActions _Input;
+    private Vector2 _MoveInput;
     private void Awake()
     {
-        inputActions = new RavenInputActions();
-    }
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+        _Input = new RavenInputActions();
     }
     private void OnEnable()
     {
-        inputActions.Enable();
-        //inputActions.Player.Jump.performed += OnJump;
+        _Input.Rav.Enable();
+        _Input.Rav.Jump.performed += Context => Jumping();
     }
     private void OnDisable()
     {
-        inputActions.Disable();
-        //inputActions.Player.Jump.performed -= OnJump;
+        _Input.Rav.Enable();
+        _Input.Rav.Jump.performed -= Context => Jumping();
     }
-    //public void Jump()
-
+    private void Update()
+    {
+        _MoveInput = _Input.Rav.Move.ReadValue<Vector2>();
+        Movement(_MoveInput);
+    }
+    private void Movement(Vector2 direccion)
+    {
+        transform.Translate(new Vector3(direccion.x, 0, direccion.y) * Time.deltaTime * 5f);
+        Debug.Log("Moviendo");
+    }
+    private void Jumping()
+    {
+        Debug.Log("Saltando");
+    }
 }

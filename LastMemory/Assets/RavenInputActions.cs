@@ -89,7 +89,7 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
     ""name"": ""RavenInputActions"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""Rav"",
             ""id"": ""947b6f1c-4ca7-43ba-95b9-c333149209d2"",
             ""actions"": [
                 {
@@ -131,6 +131,36 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""71450f80-de3f-49b8-8c81-48dc11e2059f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Spring"",
+                    ""type"": ""Button"",
+                    ""id"": ""fb8f931c-6487-4821-b462-de9d3ef1746f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""4e3040f1-ea50-402a-aefa-ac65f0c4a053"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -138,7 +168,7 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""53418939-3809-45e3-854e-7c645642da70"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
@@ -149,7 +179,7 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""03b3ac7b-f82d-4e55-a010-19af83236264"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Defend"",
@@ -160,7 +190,7 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""991b3338-49df-4c5e-a50b-5e7d0937d450"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
@@ -171,29 +201,170 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""04ada1f9-3af5-46c7-bc02-26775aad31f6"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""ec89f26d-d568-4193-a738-98f9cb1ff1d1"",
+                    ""path"": ""2DVector(mode=1)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""429caee1-9f4c-4dc2-a0fa-a17f2c827c6d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""67bc3139-8df1-4f74-9965-cdd181bb5b68"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""900ca802-60bf-413a-b7ab-ab9abfa8d3ba"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""82bcf2fe-8e9b-4781-8650-e175194674e4"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""e0f6029d-185c-4bb6-939a-d77e8883f923"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""06f16b7c-9014-4450-98ff-679855ec4a11"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2900fcd8-9441-47c3-bc83-6b2e7c0fb1cd"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""6e8ed5b2-73a9-4c5b-aec9-c50594d22e06"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e9970bb-b87c-494d-86e3-1bce09e53e03"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""Spring"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""799556b9-2add-454b-9e49-79b93835b360"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)"",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""KeyboardMouse"",
+            ""bindingGroup"": ""KeyboardMouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
-        m_Player_Defend = m_Player.FindAction("Defend", throwIfNotFound: true);
-        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        // Rav
+        m_Rav = asset.FindActionMap("Rav", throwIfNotFound: true);
+        m_Rav_Attack = m_Rav.FindAction("Attack", throwIfNotFound: true);
+        m_Rav_Defend = m_Rav.FindAction("Defend", throwIfNotFound: true);
+        m_Rav_Interact = m_Rav.FindAction("Interact", throwIfNotFound: true);
+        m_Rav_Jump = m_Rav.FindAction("Jump", throwIfNotFound: true);
+        m_Rav_Move = m_Rav.FindAction("Move", throwIfNotFound: true);
+        m_Rav_Spring = m_Rav.FindAction("Spring", throwIfNotFound: true);
+        m_Rav_Look = m_Rav.FindAction("Look", throwIfNotFound: true);
     }
 
     ~@RavenInputActions()
     {
-        UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, RavenInputActions.Player.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Rav.enabled, "This will cause a leak and performance issues, RavenInputActions.Rav.Disable() has not been called.");
     }
 
     /// <summary>
@@ -266,44 +437,59 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Attack;
-    private readonly InputAction m_Player_Defend;
-    private readonly InputAction m_Player_Interact;
-    private readonly InputAction m_Player_Jump;
+    // Rav
+    private readonly InputActionMap m_Rav;
+    private List<IRavActions> m_RavActionsCallbackInterfaces = new List<IRavActions>();
+    private readonly InputAction m_Rav_Attack;
+    private readonly InputAction m_Rav_Defend;
+    private readonly InputAction m_Rav_Interact;
+    private readonly InputAction m_Rav_Jump;
+    private readonly InputAction m_Rav_Move;
+    private readonly InputAction m_Rav_Spring;
+    private readonly InputAction m_Rav_Look;
     /// <summary>
-    /// Provides access to input actions defined in input action map "Player".
+    /// Provides access to input actions defined in input action map "Rav".
     /// </summary>
-    public struct PlayerActions
+    public struct RavActions
     {
         private @RavenInputActions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public PlayerActions(@RavenInputActions wrapper) { m_Wrapper = wrapper; }
+        public RavActions(@RavenInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Player/Attack".
+        /// Provides access to the underlying input action "Rav/Attack".
         /// </summary>
-        public InputAction @Attack => m_Wrapper.m_Player_Attack;
+        public InputAction @Attack => m_Wrapper.m_Rav_Attack;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Defend".
+        /// Provides access to the underlying input action "Rav/Defend".
         /// </summary>
-        public InputAction @Defend => m_Wrapper.m_Player_Defend;
+        public InputAction @Defend => m_Wrapper.m_Rav_Defend;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Interact".
+        /// Provides access to the underlying input action "Rav/Interact".
         /// </summary>
-        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Interact => m_Wrapper.m_Rav_Interact;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Jump".
+        /// Provides access to the underlying input action "Rav/Jump".
         /// </summary>
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Jump => m_Wrapper.m_Rav_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Rav/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Rav_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Rav/Spring".
+        /// </summary>
+        public InputAction @Spring => m_Wrapper.m_Rav_Spring;
+        /// <summary>
+        /// Provides access to the underlying input action "Rav/Look".
+        /// </summary>
+        public InputAction @Look => m_Wrapper.m_Rav_Look;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public InputActionMap Get() { return m_Wrapper.m_Rav; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -311,9 +497,9 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="PlayerActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="RavActions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(RavActions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -321,11 +507,11 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="PlayerActions" />
-        public void AddCallbacks(IPlayerActions instance)
+        /// <seealso cref="RavActions" />
+        public void AddCallbacks(IRavActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_RavActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_RavActionsCallbackInterfaces.Add(instance);
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
@@ -338,6 +524,15 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @Spring.started += instance.OnSpring;
+            @Spring.performed += instance.OnSpring;
+            @Spring.canceled += instance.OnSpring;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
         }
 
         /// <summary>
@@ -346,8 +541,8 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="PlayerActions" />
-        private void UnregisterCallbacks(IPlayerActions instance)
+        /// <seealso cref="RavActions" />
+        private void UnregisterCallbacks(IRavActions instance)
         {
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
@@ -361,15 +556,24 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @Spring.started -= instance.OnSpring;
+            @Spring.performed -= instance.OnSpring;
+            @Spring.canceled -= instance.OnSpring;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="RavActions.UnregisterCallbacks(IRavActions)" />.
         /// </summary>
-        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
-        public void RemoveCallbacks(IPlayerActions instance)
+        /// <seealso cref="RavActions.UnregisterCallbacks(IRavActions)" />
+        public void RemoveCallbacks(IRavActions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_RavActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -379,27 +583,40 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
-        /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
-        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
-        public void SetCallbacks(IPlayerActions instance)
+        /// <seealso cref="RavActions.AddCallbacks(IRavActions)" />
+        /// <seealso cref="RavActions.RemoveCallbacks(IRavActions)" />
+        /// <seealso cref="RavActions.UnregisterCallbacks(IRavActions)" />
+        public void SetCallbacks(IRavActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_RavActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_RavActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
+    /// Provides a new <see cref="RavActions" /> instance referencing this action map.
     /// </summary>
-    public PlayerActions @Player => new PlayerActions(this);
+    public RavActions @Rav => new RavActions(this);
+    private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
+    /// Provides access to the input control scheme.
     /// </summary>
-    /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
-    /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
-    public interface IPlayerActions
+    /// <seealso cref="UnityEngine.InputSystem.InputControlScheme" />
+    public InputControlScheme KeyboardMouseScheme
+    {
+        get
+        {
+            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
+            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
+        }
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Rav" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="RavActions.AddCallbacks(IRavActions)" />
+    /// <seealso cref="RavActions.RemoveCallbacks(IRavActions)" />
+    public interface IRavActions
     {
         /// <summary>
         /// Method invoked when associated input action "Attack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
@@ -429,5 +646,26 @@ public partial class @RavenInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Spring" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSpring(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Look" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLook(InputAction.CallbackContext context);
     }
 }

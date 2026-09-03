@@ -1,8 +1,13 @@
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float health;
+    public float damage;
+    public float speed;
+
+    
     void Start()
     {
         
@@ -12,5 +17,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+    public virtual void OnEnable()
+    {
+
     }
 }
