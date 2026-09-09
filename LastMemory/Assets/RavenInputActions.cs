@@ -15,38 +15,52 @@ public class RavenInputActions : MonoBehaviour
     private InputAction _Defend;
     private InputAction _Interact;
 
-    //[Header("Events")]
+    // ============================
+    // EVENTS
+    // ============================
     public event System.Action SprintPerformed;
     public event System.Action JumpPerformed;
     public event System.Action AttackPerformed;
     public event System.Action DefendPerformed;
     public event System.Action InteractPerformed;
-
+    // ============================
+    // VALUE
+    // ============================
     public Vector2 move => _Move.ReadValue<Vector2>();
     public Vector2 look => _Look.ReadValue<Vector2>();
 
-    [Header("Sprint Boton Action")]
-    public bool sprintPressed => _Sprint.WasPressedThisFrame();
-    public bool sprintHold => _Sprint.IsPressed();
-    public bool sprintReleased => _Sprint.WasReleasedThisFrame();
+    // ============================
+    // SPRINT
+    // ============================
+    public bool SprintPressed => _Sprint.WasPressedThisFrame();
+    public bool SprintHeld => _Sprint.IsPressed();
+    public bool SprintReleased => _Sprint.WasReleasedThisFrame();
+    // ============================
+    // JUMP
+    // ============================
+    public bool JumpPressed => _Jump.WasPressedThisFrame();
+    public bool JumpHeld => _Jump.IsPressed();
+    public bool JumpReleased => _Jump.WasReleasedThisFrame();
+    // ============================
+    // ATTACK
+    // ============================
+    public bool AttackPressed => _Attack.WasPressedThisFrame();
+    public bool AttacktHeld => _Attack.IsPressed();
+    public bool AttackReleased => _Attack.WasReleasedThisFrame();
+    // ============================
+    // DEFEND
+    // ============================
+    public bool DefendPressed => _Defend.WasPressedThisFrame();
+    public bool DefendHeld => _Defend.IsPressed();
+    public bool DefendReleased => _Defend.WasReleasedThisFrame();
+    // ============================
+    // INTERACT
+    // ============================
+    public bool InteractPressed => _Interact.WasPressedThisFrame();
+    public bool InteractHeld => _Interact.IsPressed();
+    public bool InteractReleased => _Interact.WasReleasedThisFrame();
 
-    public bool jumpPressed => _Jump.WasPressedThisFrame();
-    public bool jumpHold => _Jump.IsPressed();
-    public bool jumpReleased => _Jump.WasReleasedThisFrame();
-
-    public bool attackPressed => _Attack.WasPressedThisFrame();
-    public bool attacktHold => _Attack.IsPressed();
-    public bool attackReleased => _Attack.WasReleasedThisFrame();
-
-    public bool defendPressed => _Defend.WasPressedThisFrame();
-    public bool defendtHold => _Defend.IsPressed();
-    public bool defendReleased => _Defend.WasReleasedThisFrame();
-
-    public bool interactPressed => _Interact.WasPressedThisFrame();
-    public bool interactHold => _Interact.IsPressed();
-    public bool interactReleased => _Interact.WasReleasedThisFrame();
-
-    public void Awake()
+    private void Awake()
     {
         _Raven = _InputActions.FindActionMap("Raven");
 
