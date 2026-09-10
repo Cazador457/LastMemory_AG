@@ -7,24 +7,38 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private CharacterController playerController;
     public float speed = 5f;
+    public float sensity = 200;
+    public Transform Player;
+    public float XRotation=0f;
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         Movement();
         ActionsGame();
+        Loock();
     }
     private void Movement()
     {
         Vector2 movement = RavenInput.move;
+        Vector3 FinalDirectoion = (transform.forward * movement.y) + (transform.right * movement.x);
+        transform.position += FinalDirectoion * speed * Time.deltaTime;
+    }
+    private void Loock()
+    {
+        Vector2 look = RavenInput.look;
+        float MouseX = look.x * sensity * Time.deltaTime;
+        float MouseY = look.y * sensity * Time.deltaTime;
 
-        Vector3 direction=new Vector3(movement.x,0f,movement.y);
-        transform.position += direction * speed * Time.deltaTime;
-        Debug.Log(movement);
+        XRotation += MouseY;
+        XRotation = Mathf.Clamp(XRotation, -75f, 75f);
+        transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
+
+        Player.Rotate(Vector3.up * MouseX);
     }
     private void ActionsGame()
     {
@@ -39,6 +53,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Jump()
     {
+        
         Debug.Log("saltando");
     }
     private void Attack()
@@ -47,6 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Sprint()
     {
+        
         Debug.Log("Sprint");
     }
     private void Interact()
