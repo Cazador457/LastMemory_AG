@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private RavenInputActions RavenInput;
 
     [SerializeField] private CharacterController playerController;
+    private Animator Animation;
     public float speed = 5f;
     public float sensity = 200;
     public Transform Player;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Animation=GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -46,9 +48,15 @@ public class PlayerController : MonoBehaviour
         {
             Sprint();
         }
-        if (RavenInput.DefendHeld)
+        // DEFENDER
+        if (RavenInput.DefendPressed)
         {
-            Defend();
+            Defend(true);
+        }
+
+        if (RavenInput.DefendReleased)
+        {
+            Defend(false);
         }
     }
     private void Jump()
@@ -58,6 +66,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Attack()
     {
+        Animation.SetTrigger("Attack");
         Debug.Log("Atacando");
     }
     private void Sprint()
@@ -69,9 +78,10 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Interactuando");
     }
-    private void Defend()
+    private void Defend(bool defending)
     {
-        Debug.Log("Defender");
+        Animation.SetBool("Defend", defending);
+        Debug.Log("Defender+" + defending);
     }
     private void OnEnable()
     {
