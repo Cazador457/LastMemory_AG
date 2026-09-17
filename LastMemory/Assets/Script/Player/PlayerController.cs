@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float jumpCutMultipler = 2f;
 
+
+    public Animator HandAmtr_R;
+    public Animator HandAmtr_L;
+
+    bool Defend;
+
     void Start()
     {
         playerController=GetComponent<CharacterController>();
@@ -67,9 +73,12 @@ public class PlayerController : MonoBehaviour
 
         // DEFENDER
         if (RavenInput.DefendPressed)
-            Defend(true);
+            HandAmtr_L.SetBool("Defend", true);
+        if (RavenInput.DefendPressed)
+            HandAmtr_L.SetBool("Defend", true);
+            
         if (RavenInput.DefendReleased)
-            Defend(false);
+            HandAmtr_L.SetBool("Defend", false);
         // JUMP CUT
         if (RavenInput.JumpReleased && verticalVelocity.y > 0)
             verticalVelocity.y /= jumpCutMultipler;
@@ -81,7 +90,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Attack()
     {
-        Debug.Log("Atacando");
+        HandAmtr_R.Play("atk");
     }
     private void Sprint()
     {
@@ -92,10 +101,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Interactuando");
     }
-    private void Defend(bool defending)
-    {
-        Debug.Log("Defender+" + defending);
-    }
+
     private void OnEnable()
     {
         RavenInput.JumpPerformed += Jump;
