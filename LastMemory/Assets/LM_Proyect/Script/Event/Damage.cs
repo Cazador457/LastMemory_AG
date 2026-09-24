@@ -3,8 +3,15 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     public float damage = 15f;
+    public bool blocked=false;
     public void OnTriggerEnter(Collider other)
     {
+        if(blocked return;
+        if(other.CompareTag("Shield"))
+        {   
+            Debug.Log("block activate");
+            blocked=true;
+        }
         if (other.CompareTag("Enemy"))
         {
             Enemy enemy = other.GetComponent<Enemy>();
@@ -24,4 +31,10 @@ public class Damage : MonoBehaviour
             }
         }
     }
+    public void OnTriggerExit(Collider other)
+        if(other.CompareTag("Shield"))
+        {   
+            Debug.Log("block release");
+            blocked=false;
+        }
 }
