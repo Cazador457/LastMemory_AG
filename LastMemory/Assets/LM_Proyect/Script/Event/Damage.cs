@@ -6,12 +6,14 @@ public class Damage : MonoBehaviour
     public bool blocked=false;
     public void OnTriggerEnter(Collider other)
     {
-        if(blocked return;
+        if(blocked) return;
+
         if(other.CompareTag("Shield"))
         {   
             Debug.Log("block activate");
             blocked=true;
         }
+
         if (other.CompareTag("Enemy"))
         {
             Enemy enemy = other.GetComponent<Enemy>();
@@ -21,6 +23,7 @@ public class Damage : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
         }
+
         if (other.CompareTag("Player"))
         {
             PlayerController player = other.GetComponent<PlayerController>();
@@ -32,9 +35,11 @@ public class Damage : MonoBehaviour
         }
     }
     public void OnTriggerExit(Collider other)
-        if(other.CompareTag("Shield"))
-        {   
-            Debug.Log("block release");
-            blocked=false;
+    {
+        if (other.CompareTag("Shield"))
+        {
+            blocked = false;
         }
+        
+    }
 }
