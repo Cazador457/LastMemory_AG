@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float damage = 15f;
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if (other.CompareTag("Enemy"))
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+        }
+        if (other.CompareTag("Player"))
+        {
+            PlayerController player = other.GetComponent<PlayerController>();
+
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+            }
+        }
     }
 }

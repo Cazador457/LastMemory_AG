@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
 
     bool Defend;
 
+
+    public float health = 50f;
+    public Transform respawnPos;
+
     void Start()
     {
         playerController=GetComponent<CharacterController>();
@@ -113,5 +117,18 @@ public class PlayerController : MonoBehaviour
         RavenInput.JumpPerformed -= Jump;
         RavenInput.AttackPerformed -= Attack;
         RavenInput.InteractPerformed -= Interact;
+    }
+
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            GetComponent<CharacterController>().enabled = false;
+            transform.position = respawnPos.position;
+            GetComponent<CharacterController>().enabled = true;
+            health = 50f;
+        }
     }
 }

@@ -2070,6 +2070,7 @@ Transform:
   - {fileID: 1839722885}
   - {fileID: 319351193}
   - {fileID: 856422477}
+  - {fileID: 725464877}
   - {fileID: 653158423}
   - {fileID: 515203127}
   m_Father: {fileID: 0}
@@ -4678,7 +4679,7 @@ GameObject:
   - component: {fileID: 515203133}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4692,7 +4693,7 @@ Transform:
   m_GameObject: {fileID: 515203126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.03, z: 4.22}
+  m_LocalPosition: {x: -0.06414032, y: 1.03, z: 1.7694149}
   m_LocalScale: {x: 0.84483, y: 1.8846, z: 0.6734}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4714,7 +4715,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4787,7 +4788,7 @@ Animator:
   m_GameObject: {fileID: 515203126}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0987568993d913743bf0ef560caa26cd, type: 2}
+  m_Controller: {fileID: 9100000, guid: bed6aaded56587c46a4c4afdaadd3669, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4820,7 +4821,7 @@ MonoBehaviour:
   _currentStateName: 
   baseMaterial: {fileID: 2100000, guid: 2fde88e5ccd6c5143a77be1b70493265, type: 2}
   HitMaterial: {fileID: 2100000, guid: 215f9b7e60d352247acd14758e31dbdc, type: 2}
-  health: 10
+  health: 50
   damage: 10
   speed: 5
 --- !u!1 &517585427
@@ -6265,7 +6266,7 @@ GameObject:
   - component: {fileID: 653158431}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6415,6 +6416,8 @@ MonoBehaviour:
   jumpCutMultipler: 2
   HandAmtr_R: {fileID: 1531439437}
   HandAmtr_L: {fileID: 345002198}
+  health: 50
+  respawnPos: {fileID: 725464877}
 --- !u!114 &653158431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7217,6 +7220,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713284240}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &725464876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725464877}
+  m_Layer: 0
+  m_Name: Respawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725464877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725464876}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.03, z: -4.460001}
+  m_LocalScale: {x: 0.84483, y: 1.8846, z: 0.6734}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 201526367}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736704773
 GameObject:
   m_ObjectHideFlags: 0
@@ -11023,6 +11057,7 @@ GameObject:
   - component: {fileID: 991373569}
   - component: {fileID: 991373568}
   - component: {fileID: 991373567}
+  - component: {fileID: 991373570}
   m_Layer: 0
   m_Name: Espada
   m_TagString: Untagged
@@ -11039,7 +11074,7 @@ Transform:
   m_GameObject: {fileID: 991373565}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.374, z: 0}
+  m_LocalPosition: {x: 0, y: 0.308, z: 1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11060,7 +11095,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11123,6 +11158,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991373565}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &991373570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991373565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70af5706f3174c488bbf9268e68d1c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damage
+  damage: 15
 --- !u!1 &994418340
 GameObject:
   m_ObjectHideFlags: 0
@@ -16612,8 +16660,8 @@ Transform:
   m_GameObject: {fileID: 1531439435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.547, y: 0.096, z: 0.89}
-  m_LocalScale: {x: 0.13822, y: 0.57309, z: 0.15866}
+  m_LocalPosition: {x: 0.547, y: -0.179, z: 0.89}
+  m_LocalScale: {x: 0.10921, y: 0.5102513, z: 0.21433692}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 991373566}
@@ -22134,6 +22182,7 @@ GameObject:
   - component: {fileID: 2142570732}
   - component: {fileID: 2142570731}
   - component: {fileID: 2142570730}
+  - component: {fileID: 2142570733}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -22171,7 +22220,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -22234,6 +22283,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142570728}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2142570733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142570728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70af5706f3174c488bbf9268e68d1c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damage
+  damage: 15
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

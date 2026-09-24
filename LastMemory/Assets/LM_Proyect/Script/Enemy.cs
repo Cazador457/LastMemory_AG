@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     public Material baseMaterial;
     public Material HitMaterial;
 
-    public float health;
+    public float health=50f;
     public float damage;
     public float speed;
 
@@ -43,5 +43,14 @@ public class Enemy : MonoBehaviour
     public virtual void OnEnable()
     {
 
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+            Debug.Log(health+"vida restante");
+        }
     }
 }
