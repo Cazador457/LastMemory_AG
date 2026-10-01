@@ -13,7 +13,8 @@ public class CheasingState : IState
     }
     public void Update()
     {
-        float distance = Vector2.Distance(enemy.player.transform.position, enemy.enemy.position);
+        float distance = Vector2.Distance(enemy.player.position, enemy.enemy.position);
+        enemy._agent.SetDestination(enemy.player.position);
         if (enemy.player == null) return;
         if (distance < enemy.combatDistance)
         {

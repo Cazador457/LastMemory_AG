@@ -1,11 +1,15 @@
+using System.IO;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
     [Header("State Machine")]
     private StateMachine stateMachine;
+    private Seek seek;
+    public NavMeshAgent _agent;
 
-    public GameObject player;
+    public Transform player;
     public Transform enemy;
     public float maxVelocity = 5f;
     public float cooldownAttack;
@@ -26,8 +30,9 @@ public class Enemy : MonoBehaviour
         stateMachine = new StateMachine();
         ChangeState(new IdleState(this));
         var target = FindAnyObjectByType<PlayerController>(FindObjectsInactive.Include);
-        player = target.gameObject;
+        player = target.transform;
         enemy = GetComponent<Transform>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
