@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void OnEnable()
     {
-
+        health = 50f;
     }
     public void TakeDamage(float damage)
     {
