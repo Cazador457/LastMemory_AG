@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public Animator HandAmtr_L;
 
     bool Defend;
+    bool IsSearch=false;
 
 
     public float health = 50f;
@@ -78,8 +79,6 @@ public class PlayerController : MonoBehaviour
         // DEFENDER
         if (RavenInput.DefendPressed)
             HandAmtr_L.SetBool("Defend", true);
-        if (RavenInput.DefendPressed)
-            HandAmtr_L.SetBool("Defend", true);
             
         if (RavenInput.DefendReleased)
             HandAmtr_L.SetBool("Defend", false);
@@ -105,20 +104,36 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Interactuando");
     }
+    private void Search()
+    {
+        if (!IsSearch)
+        {
+            Debug.Log(IsSearch);
+            IsSearch = true;
+        }
+        else if (IsSearch)
+        {
+            Debug.Log(IsSearch);
+            IsSearch = false;
+        }
+    }
 
     private void OnEnable()
     {
         RavenInput.JumpPerformed += Jump;
         RavenInput.AttackPerformed += Attack;
+        RavenInput.SprintPerformed += Sprint;
         RavenInput.InteractPerformed += Interact;
+        RavenInput.SearchPerformed += Search;
     }
     private void OnDisable()
     {
         RavenInput.JumpPerformed -= Jump;
         RavenInput.AttackPerformed -= Attack;
+        RavenInput.SprintPerformed -= Sprint;
         RavenInput.InteractPerformed -= Interact;
+        RavenInput.SearchPerformed -= Search;
     }
-
 
     public void TakeDamage(float damage)
     {

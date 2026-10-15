@@ -14,6 +14,7 @@ public class RavenInputActions : MonoBehaviour
     private InputAction _Attack;
     private InputAction _Defend;
     private InputAction _Interact;
+    private InputAction _Search;
 
     // ============================
     // EVENTS
@@ -23,6 +24,7 @@ public class RavenInputActions : MonoBehaviour
     public event System.Action AttackPerformed;
     public event System.Action DefendPerformed;
     public event System.Action InteractPerformed;
+    public event System.Action SearchPerformed;
     // ============================
     // VALUE
     // ============================
@@ -59,6 +61,12 @@ public class RavenInputActions : MonoBehaviour
     public bool InteractPressed => _Interact.WasPressedThisFrame();
     public bool InteractHeld => _Interact.IsPressed();
     public bool InteractReleased => _Interact.WasReleasedThisFrame();
+    // ============================
+    // INTERACT
+    // ============================
+    public bool SearchPressed => _Search.WasPressedThisFrame();
+    public bool SearchHeld => _Search.IsPressed();
+    public bool SearchReleased => _Search.WasReleasedThisFrame();
 
     private void Awake()
     {
@@ -71,6 +79,7 @@ public class RavenInputActions : MonoBehaviour
         _Attack = _Raven.FindAction("Attack");
         _Defend = _Raven.FindAction("Defend");
         _Interact = _Raven.FindAction("Interact");
+        _Search = _Raven.FindAction("Search");
     }
     private void OnEnable()
     {
@@ -81,6 +90,7 @@ public class RavenInputActions : MonoBehaviour
         _Attack.performed += OnAttackPerformed;
         _Defend.performed += OnDefendPerformed;
         _Interact.performed += OnInteractPerformed;
+        _Search.performed += OnSearchPerformed;
     }
 
     private void OnDisable()
@@ -90,6 +100,7 @@ public class RavenInputActions : MonoBehaviour
         _Attack.performed -= OnAttackPerformed;
         _Defend.performed -= OnDefendPerformed;
         _Interact.performed -= OnInteractPerformed;
+        _Search.performed -= OnSearchPerformed;
 
         _Raven.Disable();
     }
@@ -112,5 +123,9 @@ public class RavenInputActions : MonoBehaviour
     private void OnInteractPerformed(InputAction.CallbackContext context)
     {
         InteractPerformed?.Invoke();
+    }
+    private void OnSearchPerformed(InputAction.CallbackContext context)
+    {
+        SearchPerformed?.Invoke();
     }
 }
