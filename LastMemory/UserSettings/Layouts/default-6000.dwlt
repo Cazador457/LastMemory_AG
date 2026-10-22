@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -618,7 +618,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -696,10 +696,16 @@ MonoBehaviour:
         m_Data: 0
       m_ExpandedIDs:
       - m_Data: -1336
+      - m_Data: 49318
+      - m_Data: 49652
+      - m_Data: 49680
+      - m_Data: 50280
+      - m_Data: 50926
+      - m_Data: 50950
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Button
+        m_OriginalName: Button
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -707,10 +713,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: -16180
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1162,9 +1168,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 974.9675, y: 593.91296, z: 896.27026}
+    m_Target: {x: 772.30554, y: 714.27997, z: 930.36847}
     speed: 2
-    m_Value: {x: 974.9675, y: 593.91296, z: 896.27026}
+    m_Value: {x: 772.30554, y: 714.27997, z: 930.36847}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1210,13 +1216,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08744577, y: -0.14414811, z: -0.012830478, w: 0.98568684}
+    m_Target: {x: -0.0419778, y: 0.013774597, z: 0.0005382673, w: 0.9991079}
     speed: 2
-    m_Value: {x: 0.08744577, y: 0.14414811, z: 0.012830478, w: -0.9856868}
+    m_Value: {x: -0.04197426, y: 0.013773437, z: 0.00053822197, w: 0.9990237}
   m_Size:
-    m_Target: 788.37164
+    m_Target: 860.9216
     speed: 2
-    m_Value: 788.37164
+    m_Value: 860.9216
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1390,7 +1396,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/LM_Proyect
+    - Assets/LM_Proyect/ScriptableObject
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1400,22 +1406,25 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/LM_Proyect
+  - Assets/LM_Proyect/ScriptableObject
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Azul 20\Documents\LastMemory_AG\LastMemory
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 250}
     m_SelectedIDs:
-    - m_Data: 51840
+    - m_Data: 51946
     m_LastClickedID:
-      m_Data: 51840
+      m_Data: 51946
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 51838
     - m_Data: 51840
+    - m_Data: 51944
+    - m_Data: 51946
+    - m_Data: 52052
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1532,9 +1541,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 592
+    y: 750
     width: 1499
-    height: 412
+    height: 254
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

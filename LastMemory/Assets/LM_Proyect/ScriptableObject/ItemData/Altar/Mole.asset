@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0975f1f14a3cdb46b6c8d6c618476f3, type: 3}
+  m_Name: Mole
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  _id: Mole
+  _amount: 0
+  _icon: {fileID: 0}
+  _description: "Los Moles son varios tipos de salsas mexicanas muy condimentadas
+    hechas principalmente a base de chiles y especias, y que son espesadas con masa
+    de ma\xEDz, tortilla o pan."
+  CurrentResource: 0

@@ -18374,6 +18374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1562184275}
+  - component: {fileID: 1562184276}
   m_Layer: 0
   m_Name: InventoryUI
   m_TagString: Untagged
@@ -18397,6 +18398,27 @@ Transform:
   - {fileID: 43495281}
   m_Father: {fileID: 1542574777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562184276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562184274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01465939b156332448b012183b70c8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
+  AltarItems:
+  - {fileID: 11400000, guid: a123ca26c295c9b469c23e589c81e513, type: 2}
+  - {fileID: 11400000, guid: fac87496e6cb4ec45a89532eb77f8c14, type: 2}
+  - {fileID: 11400000, guid: 2fc2ac28884d4cd4abfc8910bd2e985a, type: 2}
+  _name: {fileID: 919079796}
+  _icon: {fileID: 2012192061}
+  _amount: {fileID: 2074201417}
+  _description: {fileID: 1150019949}
+  ItemSelect: 0
 --- !u!1 &1565102842
 GameObject:
   m_ObjectHideFlags: 0
