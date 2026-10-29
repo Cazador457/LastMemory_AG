@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
-using UnityEngine.InputSystem;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -26,7 +24,7 @@ public class InventoryUI : MonoBehaviour
         if (AltarItems != null)
         {
             _name.text = AltarItems[ItemSelect].ID;
-            _icon = AltarItems[ItemSelect].Icon;
+            _icon.sprite = AltarItems[ItemSelect].Icon;
             _amount.text = $"{AltarItems[ItemSelect].Amount}";
             _description.text = AltarItems[ItemSelect].Description;
         }

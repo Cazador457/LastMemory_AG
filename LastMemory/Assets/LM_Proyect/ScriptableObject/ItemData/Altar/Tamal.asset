@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Tamal
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   _id: 
-  _icon: {fileID: 0}
+  _itemNum: 11
   _amount: 0
+  _icon: {fileID: 0}
   _description: 
+  CurrentResource: 0

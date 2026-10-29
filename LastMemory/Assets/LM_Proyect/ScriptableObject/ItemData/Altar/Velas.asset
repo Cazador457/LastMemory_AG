@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0975f1f14a3cdb46b6c8d6c618476f3, type: 3}
   m_Name: Velas
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  _id: 
-  _description: 
-  _value: 0
+  _id: Velas
+  _itemNum: 12
+  _amount: 0
+  _icon: {fileID: 21300000, guid: 64294b4d5232b8445bd0722972b0fe4c, type: 3}
+  _description: "Las velas blancas simbolizan principalmente la pureza, la paz, la
+    claridad mental y la protecci\xF3n espiritual. Al ser de color blanco \u2014que
+    contiene a todos los dem\xE1s colores\u2014, a menudo se considera una luz comod\xEDn
+    que puede sustituir a cualquier otro tono en rituales y peticiones."
+  CurrentResource: 0
