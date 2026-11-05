@@ -14,7 +14,25 @@ public class ItemData : ScriptableObject
     public string ID => _id;
     public int ItemNum => _itemNum;
     public Category CurrentResource;
-    public int Amount => _amount;
+    /*public int Amount
+    {
+        get => _amount;
+        set => _amount = value;
+    }*/
+
+    public int Amount
+    {
+        get
+        {
+            return _amount;
+        }
+        set
+        {
+            _amount = value;
+        }
+    }
+
+
     public Sprite Icon => _icon;
     public string Description => _description;
 }

@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            PoolManager.Instance.SpawnFromPool("Horn",enemy.position, enemy.rotation);
+            PoolManager.Instance.SpawnFromPool("Drop", enemy.position, enemy.rotation);
             gameObject.SetActive(false);
             Debug.Log(health+"vida restante");
         }

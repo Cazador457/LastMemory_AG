@@ -11,11 +11,15 @@ public class InventoryIcon : MonoBehaviour
     [SerializeField] private Image _iconImage;
     [SerializeField] private TextMeshProUGUI _IconAmount;
 
-    void Start()
+    private void Awake()
     {
         _iconButton = GetComponent<Button>();
         _iconImage = GetComponent<Image>();
-        _IconAmount=transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        _IconAmount = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+    }
+    void Start()
+    {
+        
         _iconImage.sprite = _item.Icon;
         _IconAmount.text = _item.Amount.ToString();
     }

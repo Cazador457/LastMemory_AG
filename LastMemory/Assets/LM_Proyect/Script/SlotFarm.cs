@@ -9,7 +9,8 @@ public class SlotFarm : MonoBehaviour
     public void StartFarm()
     {
        if (_CurrentPlant != null && _CurrentPlant.activeSelf)
-            return; PoolManager.SpawnFromPool(Plant[Inventory.ItemSelect], _CurrentPlant.transform.position, _CurrentPlant.transform.rotation);
+            return; 
+       PoolManager.Instance.SpawnFromPool(Plant[Inventory.ItemSelect], _CurrentPlant.transform.position, _CurrentPlant.transform.rotation);
     }
     public void Harvest()
     {
