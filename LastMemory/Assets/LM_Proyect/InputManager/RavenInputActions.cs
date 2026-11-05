@@ -16,6 +16,8 @@ public class RavenInputActions : MonoBehaviour
     private InputAction _Interact;
     private InputAction _Search;
 
+    private InputAction _Inventory;
+
     // ============================
     // EVENTS
     // ============================
@@ -25,6 +27,7 @@ public class RavenInputActions : MonoBehaviour
     public event System.Action DefendPerformed;
     public event System.Action InteractPerformed;
     public event System.Action SearchPerformed;
+    public event System.Action InventoryPerformed;
     // ============================
     // VALUE
     // ============================
@@ -62,11 +65,15 @@ public class RavenInputActions : MonoBehaviour
     public bool InteractHeld => _Interact.IsPressed();
     public bool InteractReleased => _Interact.WasReleasedThisFrame();
     // ============================
-    // INTERACT
+    // SEARCH
     // ============================
     public bool SearchPressed => _Search.WasPressedThisFrame();
     public bool SearchHeld => _Search.IsPressed();
     public bool SearchReleased => _Search.WasReleasedThisFrame();
+    // ============================
+    // INVENTARY
+    // ============================
+    public bool InventoryPressed => _Search.WasPressedThisFrame();
 
     private void Awake()
     {
@@ -80,6 +87,7 @@ public class RavenInputActions : MonoBehaviour
         _Defend = _Raven.FindAction("Defend");
         _Interact = _Raven.FindAction("Interact");
         _Search = _Raven.FindAction("Search");
+        _Inventory = _Raven.FindAction("Inventory");
     }
     private void OnEnable()
     {
@@ -91,6 +99,7 @@ public class RavenInputActions : MonoBehaviour
         _Defend.performed += OnDefendPerformed;
         _Interact.performed += OnInteractPerformed;
         _Search.performed += OnSearchPerformed;
+        _Inventory.performed += OnInventoryPerformed;
     }
 
     private void OnDisable()
@@ -101,6 +110,7 @@ public class RavenInputActions : MonoBehaviour
         _Defend.performed -= OnDefendPerformed;
         _Interact.performed -= OnInteractPerformed;
         _Search.performed -= OnSearchPerformed;
+        _Inventory.performed -= OnInventoryPerformed;
 
         _Raven.Disable();
     }
@@ -127,5 +137,9 @@ public class RavenInputActions : MonoBehaviour
     private void OnSearchPerformed(InputAction.CallbackContext context)
     {
         SearchPerformed?.Invoke();
+    }
+    private void OnInventoryPerformed(InputAction.CallbackContext context)
+    {
+        InventoryPerformed?.Invoke();
     }
 }

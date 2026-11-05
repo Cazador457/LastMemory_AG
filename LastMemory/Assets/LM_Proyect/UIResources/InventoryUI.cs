@@ -4,6 +4,10 @@ using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
+    [SerializeField] private RavenInputActions RavenInput;
+    [SerializeField] private GameObject UI;
+    private bool IsInventoryActive=false;
+
     [Header("InventoryObjects")]
     [SerializeField] private ItemData[] AltarItems;
     public TextMeshProUGUI _name;
@@ -12,6 +16,19 @@ public class InventoryUI : MonoBehaviour
     public TextMeshProUGUI _description;
     public int ItemSelect=0;
 
+    public void InventoryActive()
+    {
+        if (RavenInput.InventoryPressed & !IsInventoryActive)
+        {
+            UI.SetActive(true);
+            IsInventoryActive = true;
+        }
+        if (RavenInput.InventoryPressed & IsInventoryActive)
+        {
+            UI.SetActive(false);
+            IsInventoryActive = false;
+        }
+    }
     public void OnEnable()
     {
         if (AltarItems == null)

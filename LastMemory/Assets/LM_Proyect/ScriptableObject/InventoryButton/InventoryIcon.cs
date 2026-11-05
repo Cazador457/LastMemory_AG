@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class InventoryIcon : MonoBehaviour
 {
+    [SerializeField] private InventoryUI Inventory;
+
     [SerializeField] private ItemData _item;
     [SerializeField] private Button _iconButton;
     [SerializeField] private Image _iconImage;
@@ -26,6 +27,7 @@ public class InventoryIcon : MonoBehaviour
 
     public void Icon()
     {
+        
         Debug.Log("InfoUpdate");
     }
 
