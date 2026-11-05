@@ -15,7 +15,6 @@ public class RavenInputActions : MonoBehaviour
     private InputAction _Defend;
     private InputAction _Interact;
     private InputAction _Search;
-
     private InputAction _Inventory;
 
     // ============================
@@ -73,7 +72,7 @@ public class RavenInputActions : MonoBehaviour
     // ============================
     // INVENTARY
     // ============================
-    public bool InventoryPressed => _Search.WasPressedThisFrame();
+    public bool InventoryPressed => _Inventory.WasPressedThisFrame();
 
     private void Awake()
     {
