@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0975f1f14a3cdb46b6c8d6c618476f3, type: 3}
   m_Name: "Ca\xF1a_de_Azucar"
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  _id: 
+  _id: "Ca\xF1a de Azucar"
+  _tag: "Ca\xF1a_de_Azucar"
   _itemNum: 3
   _amount: 0
   _icon: {fileID: 0}
   _description: 
+  _modelPrefab: {fileID: 0}
   CurrentResource: 0

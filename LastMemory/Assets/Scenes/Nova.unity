@@ -4172,12 +4172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
   pools:
-  - tag: Cempasuchil
-    prefab: {fileID: 919132149155446097, guid: 20758635eb72b1f42b644d0bdab07a4c, type: 3}
+  - Item: {fileID: 11400000, guid: 4d52b3bb0cbaf1241b00008f32485f34, type: 2}
     size: 1
-  - tag: Drop
-    prefab: {fileID: 2701385500645308192, guid: df29a01d98ca7f04baa2fc5b36b72b05, type: 3}
-    size: 5
 --- !u!1 &377100869
 GameObject:
   m_ObjectHideFlags: 0
@@ -26642,6 +26638,7 @@ MonoBehaviour:
   cheasingDistance: 5
   combatDistance: 4
   _currentStateName: 
+  Itemdrop: {fileID: 11400000, guid: 4d52b3bb0cbaf1241b00008f32485f34, type: 2}
   baseMaterial: {fileID: 2100000, guid: 2fde88e5ccd6c5143a77be1b70493265, type: 2}
   HitMaterial: {fileID: 2100000, guid: 215f9b7e60d352247acd14758e31dbdc, type: 2}
   health: 50

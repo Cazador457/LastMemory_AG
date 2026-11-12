@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0975f1f14a3cdb46b6c8d6c618476f3, type: 3}
   m_Name: Arcos_de_Carrizo
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  _id: 
+  _id: Arco de Carrizo
+  _tag: Arco_de_Carrizo
   _itemNum: 1
   _amount: 0
   _icon: {fileID: 0}
   _description: 
+  _modelPrefab: {fileID: 0}
   CurrentResource: 0

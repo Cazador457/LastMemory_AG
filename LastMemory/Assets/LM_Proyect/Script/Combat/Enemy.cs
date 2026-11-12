@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public float combatDistance;
     public string _currentStateName = "";
 
+    [SerializeField] private ItemData Itemdrop;
     public Material baseMaterial;
     public Material HitMaterial;
 
@@ -54,9 +55,9 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            PoolManager.Instance.SpawnFromPool("Drop", enemy.position, enemy.rotation);
+            PoolManager.Instance.SpawnFromPool(Itemdrop.Tag, enemy.position, enemy.rotation);
             gameObject.SetActive(false);
-            Debug.Log(health+"vida restante");
+            Debug.Log(health + "vida restante");
         }
     }
 }
