@@ -7,15 +7,17 @@ public class InventoryIcon : MonoBehaviour
     [SerializeField] private InventoryUI Inventory;
     [SerializeField] private int _buttonValue;
     [SerializeField] private ItemData _item;
-    [SerializeField] private Button _iconButton;
+    [SerializeField] private Button _iconButtonRefresh;
     [SerializeField] private Image _iconImage;
     [SerializeField] private TextMeshProUGUI _IconAmount;
+    [SerializeField] private Button _IconButtonFarm;
 
     private void Awake()
     {
-        _iconButton = GetComponent<Button>();
+        _iconButtonRefresh = GetComponent<Button>();
         _iconImage = GetComponent<Image>();
         _IconAmount = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        _IconButtonFarm = transform.GetChild(1).GetComponent<Button>();
     }
     void Start()
     {
@@ -25,11 +27,13 @@ public class InventoryIcon : MonoBehaviour
     }
     public void OnEnable()
     {
-        _iconButton.onClick.AddListener(Icon);
+        _iconButtonRefresh.onClick.AddListener(Icon);
+        _IconButtonFarm.onClick.AddListener(Farm);
     }
     public void OnDisable()
     {
-        _iconButton.onClick.RemoveListener(Icon);
+        _iconButtonRefresh.onClick.RemoveListener(Icon);
+        _IconButtonFarm.onClick.RemoveListener(Farm);
     }
 
     public void Icon()
@@ -37,6 +41,11 @@ public class InventoryIcon : MonoBehaviour
         Inventory.ItemSelect = _buttonValue;
         Inventory.RefreshUI();
         Debug.Log("InfoUpdate");
+    }
+    public void Farm()
+    {
+        SlotFarm Planted= Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
+        Planted.Planting(_item.Tag);
     }
 
 

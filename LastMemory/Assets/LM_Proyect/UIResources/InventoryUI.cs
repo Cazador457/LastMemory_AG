@@ -14,6 +14,9 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _amount;
     [SerializeField] private TextMeshProUGUI _description;
     public int ItemSelect=0;
+    public GameObject[] FarmTerrain;
+    public int SlotTerrain;
+    public bool CanPlant = false;
 
     public void OnEnable()
     {
