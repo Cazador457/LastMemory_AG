@@ -46,7 +46,26 @@ public class PoolManager : MonoBehaviour
             return null;
         }
 
-        GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+        foreach (GameObject obj in poolDictionary[tag])
+        {
+            if (!obj.activeInHierarchy).      { obj.transform.SetPositionAndRotation(position, rotation);
+            obj.SetActive(true);
+
+                 return obj;
+            }
+        }
+        Pool pool = pools.Find(p => p.Item.Tag == tag);
+
+    if (pool == null)
+        return null;
+        GameObject newObject = Instantiate(pool.Item.ModelPrefab);
+
+    newObject.transform.SetPositionAndRotation(position, rotation);
+    newObject.SetActive(true);
+        poolDictionary[tag].Enqueue(newObject);
+
+    return newObject;
+        /*GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
@@ -54,6 +73,6 @@ public class PoolManager : MonoBehaviour
 
         poolDictionary[tag].Enqueue(objectToSpawn);
 
-        return objectToSpawn;
+        return objectToSpawn;*/
     }
 }
