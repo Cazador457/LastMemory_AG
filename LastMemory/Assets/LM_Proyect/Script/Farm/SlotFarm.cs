@@ -4,28 +4,30 @@ using UnityEngine;
 public class SlotFarm : MonoBehaviour
 {
     [SerializeField] private InventoryUI Inventory;
-    [SerializeField] private GameObject _CurrentPlant;
+    [SerializeField] private Transform SpawnPoint;
     [SerializeField] private int _SlotNum;
+    private GameObject _CurrentPlant;
     private Coroutine IsPlanted;
 
     private void Awake()
     {
-        _CurrentPlant = transform.GetChild(0).GetComponent<GameObject>();
+        _CurrentPlant = transform.GetChild(0).gameObject;
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Inventory.SlotTerrain = _SlotNum;
-            Inventory.CanPlant = true;
-        }
+        if (!other.CompareTag("Player"))
+           return;
+
+        Inventory.SlotTerrain = _SlotNum;
+        Inventory.CanPlant = true;
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (!other.CompareTag("Player"))
+           return;
+        if (Inventory.SlotTerrain == _SlotNum)
             Inventory.CanPlant = false;
-        }
+        
     }
     public void Harvest()
     {
@@ -37,7 +39,14 @@ public class SlotFarm : MonoBehaviour
     }
     public void Planting(string Tag)
     {
-        _CurrentPlant = PoolManager.Instance.SpawnFromPool(Tag, _CurrentPlant.transform.position, _CurrentPlant.transform.rotation);
+        if (_CurrentPlant != null && _CurrentPlant.activeSelf)
+            return;
+
+        _CurrentPlant = PoolManager.Instance.SpawnFromPool(
+            Tag,
+            _SpawnPoint.position,
+            _SpawnPoint.rotation
+        );
     }
     IEnumerator PlantGrowing()
     {
