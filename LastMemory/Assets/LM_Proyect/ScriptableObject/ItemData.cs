@@ -7,7 +7,7 @@ public class ItemData : ScriptableObject
     [SerializeField] private string _id;
     [SerializeField] private string _tag;
     [SerializeField] private int _itemNum;
-    [SerializeField] private Category _curretResource;
+    [SerializeField] private Category _CurrentResource;
     [SerializeField] private int _amount;
     [SerializeField] private Sprite _icon;
     [SerializeField] private string _description;
@@ -15,11 +15,11 @@ public class ItemData : ScriptableObject
     public string ID => _id;
     public string Tag => _tag;
     public int ItemNum => _itemNum;
-    public Category CurrentResource => _currentResource;
+    public Category CurrentResource => _CurrentResource;
     public int Amount
     {
-        get=>_amount;
-        set=>_amount=Mathf.Max(0,value);
+        get => _amount;
+        set => _amount = Mathf.Max(0, value);
         /*get{ return _amount; }
         set{ _amount = value; }*/
     }

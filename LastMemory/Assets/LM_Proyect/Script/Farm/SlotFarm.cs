@@ -4,7 +4,7 @@ using UnityEngine;
 public class SlotFarm : MonoBehaviour
 {
     [SerializeField] private InventoryUI Inventory;
-    [SerializeField] private Transform SpawnPoint;
+    [SerializeField] private Transform _SpawnPoint;
     [SerializeField] private int _SlotNum;
     private GameObject _CurrentPlant;
     private Coroutine IsPlanted;

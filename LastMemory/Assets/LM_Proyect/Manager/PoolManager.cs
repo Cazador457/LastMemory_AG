@@ -5,13 +5,7 @@ public class PoolManager : MonoBehaviour
 {
     public static PoolManager Instance;
 
-    [System.Serializable]
-    public class Pool
-    {
-        public ItemData Item;
-        public int size;
-    }
-
+    [System.Serializable] public class Pool{public ItemData Item; public int size;}
     public List<Pool> pools;
     private Dictionary<string, Queue<GameObject>> poolDictionary;
 
@@ -48,23 +42,25 @@ public class PoolManager : MonoBehaviour
 
         foreach (GameObject obj in poolDictionary[tag])
         {
-            if (!obj.activeInHierarchy).      { obj.transform.SetPositionAndRotation(position, rotation);
-            obj.SetActive(true);
-
-                 return obj;
+            if (!obj.activeInHierarchy)
+            {
+                obj.transform.SetPositionAndRotation(position, rotation);
+                obj.SetActive(true);
+                return obj;
             }
         }
         Pool pool = pools.Find(p => p.Item.Tag == tag);
 
-    if (pool == null)
-        return null;
+        if (pool == null)
+            return null;
+
         GameObject newObject = Instantiate(pool.Item.ModelPrefab);
 
-    newObject.transform.SetPositionAndRotation(position, rotation);
-    newObject.SetActive(true);
+        newObject.transform.SetPositionAndRotation(position, rotation);
+        newObject.SetActive(true);
         poolDictionary[tag].Enqueue(newObject);
 
-    return newObject;
+        return newObject;
         /*GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
         objectToSpawn.SetActive(true);
