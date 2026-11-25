@@ -46,13 +46,12 @@ public class InventoryIcon : MonoBehaviour
     {
         /*SlotFarm Planted= Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
         Planted.Planting(_item.Tag);*/
-        if (!Inventory.CanPlant)
-        return;
-
-    if (_item == null)
+        if (!Inventory.CanPlant || _item == null)
         return;
 
     if (_item.CurrentResource != Category.Farm_Resources)
+        return;
+    if (_item.Amount <= 0)
         return;
 
     if (Inventory.SlotTerrain < 0 ||
@@ -66,7 +65,12 @@ public class InventoryIcon : MonoBehaviour
     if (planted == null)
         return;
 
-    planted.Planting(_item.Tag);
+    if (planted.Planting(_item.Tag))
+    {
+        _item.Amount--;
+        _IconAmount.text = _item.Amount.ToString();
+        Inventory.RefreshUI();
+    }
     }
 
 
