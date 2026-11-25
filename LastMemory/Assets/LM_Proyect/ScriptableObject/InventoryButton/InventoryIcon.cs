@@ -44,8 +44,29 @@ public class InventoryIcon : MonoBehaviour
     }
     public void Farm()
     {
-        SlotFarm Planted= Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
-        Planted.Planting(_item.Tag);
+        /*SlotFarm Planted= Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
+        Planted.Planting(_item.Tag);*/
+        if (!Inventory.CanPlant)
+        return;
+
+    if (_item == null)
+        return;
+
+    if (_item.CurrentResource != Category.Farm_Resources)
+        return;
+
+    if (Inventory.SlotTerrain < 0 ||
+        Inventory.SlotTerrain >= Inventory.FarmTerrain.Length)
+        return;
+
+    SlotFarm planted = Inventory.FarmTerrain[
+        Inventory.SlotTerrain
+    ].GetComponent<SlotFarm>();
+
+    if (planted == null)
+        return;
+
+    planted.Planting(_item.Tag);
     }
 
 
