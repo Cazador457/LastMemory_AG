@@ -7,12 +7,12 @@ public class SlotFarm : MonoBehaviour
     [SerializeField] private Transform _SpawnPoint;
     [SerializeField] private int _SlotNum;
     private GameObject _CurrentPlant;
-    private Coroutine IsPlanted;
+    //private Coroutine IsPlanted;
 
-    private void Awake()
+    /*private void Awake()
     {
         _CurrentPlant = transform.GetChild(0).gameObject;
-    }
+    }*/
     public void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player"))
