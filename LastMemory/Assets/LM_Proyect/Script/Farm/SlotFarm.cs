@@ -37,16 +37,17 @@ public class SlotFarm : MonoBehaviour
         _CurrentPlant.SetActive(false);
         _CurrentPlant = null;
     }
-    public void Planting(string Tag)
+    public bool Planting(string Tag)
     {
-        if (_CurrentPlant != null && _CurrentPlant.activeSelf)
-            return;
+        if (_CurrentPlant != null && _CurrentPlant.activeInHierarchy)
+            return false;
 
         _CurrentPlant = PoolManager.Instance.SpawnFromPool(
             Tag,
             _SpawnPoint.position,
             _SpawnPoint.rotation
         );
+        return _CurrentPlant != null;
     }
     IEnumerator PlantGrowing()
     {
