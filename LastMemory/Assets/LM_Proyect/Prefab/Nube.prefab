@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9205541158079695439}
   - component: {fileID: 4792510193066479837}
   - component: {fileID: 191287394358866614}
+  - component: {fileID: 2893881615245161850}
   m_Layer: 0
   m_Name: Nube
   m_TagString: Untagged
@@ -112,3 +113,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2893881615245161850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806581284317502674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5f8324b9f2b9e49b3993cac501f434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Plant
+  PlantData: {fileID: 11400000, guid: 0cf7f98a76689c34f90e6a983d50b54e, type: 2}
+  growingTime: 0
+  harvest: 15.5

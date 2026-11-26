@@ -1,31 +1,39 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
     [SerializeField] private ItemData PlantData;
-    [SerializeField] private GameObject[] PlantState;
-    [SerializeField] private float[] GrowingTime;
-
-    Coroutine PlantGrowing;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //[SerializeField] private SeedData Seed;
+    //[SerializeField] private GameObject[] PlantState;
+    //[SerializeField] private float[] GrowingTime;
+    public float growingTime = 0;
+    public float harvestState = 15.5f;
+    Coroutine GrowingTime;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        //Growing();
+        Debug.Log($"{growingTime}");
+    }
+    public void Growing()
+    {
+        if (growingTime <= harvestState)
+            growingTime += Time.deltaTime;
+        if (growingTime >= harvestState)
+            growingTime = harvestState;
+        Debug.Log("Cosechable");
+    }
+    public void Harvest()
+    {
+
     }
     IEnumerator GrowingState()
     {
-        
-        yield return new WaitForSeconds(GrowingTime[0]);
-        yield return new WaitForSeconds(GrowingTime[1]);
-        yield return new WaitForSeconds(GrowingTime[2]);
+        yield return new WaitForSeconds(2f);
     }
 }

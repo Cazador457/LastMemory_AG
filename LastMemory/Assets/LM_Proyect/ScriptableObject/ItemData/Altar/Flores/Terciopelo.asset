@@ -15,10 +15,10 @@ MonoBehaviour:
   _id: Terciopelo
   _tag: Terciopelo
   _itemNum: 0
-  _CurrentResource: 0
-  _amount: 5
+  _CurrentResource: 2
+  _amount: 9
   _icon: {fileID: 21300000, guid: bd6ce46c87d8af1448ee9eb85663459b, type: 3}
   _description: "La celos\xEDa, Cresta de Gallo o Mano de le\xF3n, com\xFAnmente
     conocida como Terciopelo. se dice que la presencia del Terciopelo trae confort
     durante el duelo por perder un ser querido."
-  _modelPrefab: {fileID: 0}
+  _modelPrefab: {fileID: 9009747152022039913, guid: 31e6c223e8553c241a2b2c5dc21d32e7, type: 3}

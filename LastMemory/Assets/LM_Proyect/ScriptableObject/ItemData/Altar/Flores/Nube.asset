@@ -16,7 +16,7 @@ MonoBehaviour:
   _tag: Nube
   _itemNum: 0
   _CurrentResource: 2
-  _amount: 5
+  _amount: 8
   _icon: {fileID: 21300000, guid: 9c2ae4c05cebcfd438234cd5d095d11e, type: 3}
   _description: "Tambi\xE9n conocida como Velo de novia, son florecillas blancas
     que vienen en voluminosos ramilletes, perfectas para adornar tu altar de muertos.
