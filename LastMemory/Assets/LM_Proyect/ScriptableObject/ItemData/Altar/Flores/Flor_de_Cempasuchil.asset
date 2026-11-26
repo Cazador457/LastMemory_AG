@@ -15,8 +15,8 @@ MonoBehaviour:
   _id: Cempasuchil
   _tag: Cempasuchil
   _itemNum: 5
-  _amount: 0
-  _icon: {fileID: 0}
+  _CurrentResource: 2
+  _amount: 5
+  _icon: {fileID: 21300000, guid: 37d37c4901811b84da982da89e7aeb96, type: 3}
   _description: 
-  _modelPrefab: {fileID: 0}
-  CurrentResource: 0
+  _modelPrefab: {fileID: 7719493532728325174, guid: d4186605f5f78f2438e83e718da2057f, type: 3}

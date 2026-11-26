@@ -46,32 +46,30 @@ public class InventoryIcon : MonoBehaviour
     {
         /*SlotFarm Planted= Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
         Planted.Planting(_item.Tag);*/
+        Debug.Log("metodo farm");
         if (!Inventory.CanPlant || _item == null)
-        return;
+            return;
 
-    if (_item.CurrentResource != Category.Farm_Resources)
-        return;
-    if (_item.Amount <= 0)
-        return;
+        if (_item.CurrentResource != Category.Farm_Resources)
+            return;
 
-    if (Inventory.SlotTerrain < 0 ||
-        Inventory.SlotTerrain >= Inventory.FarmTerrain.Length)
-        return;
+        if (_item.Amount <= 0)
+            return;
 
-    SlotFarm planted = Inventory.FarmTerrain[
-        Inventory.SlotTerrain
-    ].GetComponent<SlotFarm>();
+        if (Inventory.SlotTerrain < 0 || Inventory.SlotTerrain >= Inventory.FarmTerrain.Length)
+            return;
 
-    if (planted == null)
-        return;
+        SlotFarm planted = Inventory.FarmTerrain[Inventory.SlotTerrain].GetComponent<SlotFarm>();
 
-    if (planted.Planting(_item.Tag))
-    {
-        _item.Amount--;
-        _IconAmount.text = _item.Amount.ToString();
-        Inventory.RefreshUI();
+        if (planted == null)
+            return;
+
+        if (planted.Planting(_item.Tag))
+        {
+            _item.Amount--;
+            _IconAmount.text = _item.Amount.ToString();
+            Inventory.RefreshUI();
+            Debug.Log("Plantando");
+        }
     }
-    }
-
-
 }

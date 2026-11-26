@@ -61,14 +61,5 @@ public class PoolManager : MonoBehaviour
         poolDictionary[tag].Enqueue(newObject);
 
         return newObject;
-        /*GameObject objectToSpawn = poolDictionary[tag].Dequeue();
-
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
-
-        poolDictionary[tag].Enqueue(objectToSpawn);
-
-        return objectToSpawn;*/
     }
 }

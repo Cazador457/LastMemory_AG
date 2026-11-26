@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &43495281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -637,9 +637,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1479484910}
+  _SlotNum: 17
 --- !u!1 &72322304
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,9 +990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 977171584}
+  _SlotNum: 1
 --- !u!1 &80717959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,9 +1457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1496803817}
+  _SlotNum: 15
 --- !u!1 &117167462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,10 +2003,10 @@ RectTransform:
   - {fileID: 814163598}
   m_Father: {fileID: 1206340715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 190, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157820507
 MonoBehaviour:
@@ -3693,9 +3693,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 964110176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -50}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &248273628
@@ -4469,9 +4469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 328182237}
+  _SlotNum: 19
 --- !u!1 &319351192
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,9 +4682,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1963710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -50}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &331415625
@@ -4925,9 +4925,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 640092134}
+  _SlotNum: 12
 --- !u!1 &345002196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,9 +5560,9 @@ RectTransform:
   - {fileID: 1351740140}
   m_Father: {fileID: 1690073348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -50}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377100871
@@ -6049,10 +6049,10 @@ RectTransform:
   - {fileID: 232971001}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 470, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435577871
 MonoBehaviour:
@@ -7529,10 +7529,10 @@ RectTransform:
   - {fileID: 2032333658}
   m_Father: {fileID: 1206340715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 330, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537639740
 MonoBehaviour:
@@ -8070,9 +8070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1905653296}
+  _SlotNum: 18
 --- !u!1 &567070898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8495,8 +8495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1591465933}
   _SlotNum: 0
 --- !u!1 &579268855
 GameObject:
@@ -12458,9 +12458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1355754381}
+  _SlotNum: 14
 --- !u!1 &805487162
 GameObject:
   m_ObjectHideFlags: 0
@@ -13152,9 +13152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1194411269}
+  _SlotNum: 16
 --- !u!1 &836253532
 GameObject:
   m_ObjectHideFlags: 0
@@ -14954,9 +14954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 884336987}
+  _SlotNum: 4
 --- !u!1 &908580977
 GameObject:
   m_ObjectHideFlags: 0
@@ -17701,10 +17701,10 @@ RectTransform:
   - {fileID: 553661674}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106912179
 MonoBehaviour:
@@ -18793,9 +18793,9 @@ RectTransform:
   - {fileID: 1943367103}
   m_Father: {fileID: 1690073348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 400, y: -190}
   m_SizeDelta: {x: 660, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206340716
@@ -18950,9 +18950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1917892458}
+  _SlotNum: 8
 --- !u!1 &1216191548
 GameObject:
   m_ObjectHideFlags: 0
@@ -19706,9 +19706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 2007470272}
+  _SlotNum: 9
 --- !u!1 &1280610021
 GameObject:
   m_ObjectHideFlags: 0
@@ -20826,8 +20826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
   Inventory: {fileID: 1562184276}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  _SpawnPoint: {fileID: 571275602}
+  _SlotNum: 2
 --- !u!1 &1351740139
 GameObject:
   m_ObjectHideFlags: 0
@@ -20864,10 +20864,10 @@ RectTransform:
   - {fileID: 232810566}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 750, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351740141
 MonoBehaviour:
@@ -21790,10 +21790,10 @@ RectTransform:
   - {fileID: 503623285}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 190, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379592487
 MonoBehaviour:
@@ -22213,10 +22213,10 @@ RectTransform:
   - {fileID: 1403119448}
   m_Father: {fileID: 1206340715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395687667
 MonoBehaviour:
@@ -23441,9 +23441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 255617642}
+  _SlotNum: 6
 --- !u!1 &1478955777
 GameObject:
   m_ObjectHideFlags: 0
@@ -24497,9 +24497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1842235895}
+  _SlotNum: 13
 --- !u!1 &1561002173
 GameObject:
   m_ObjectHideFlags: 0
@@ -24626,9 +24626,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1765047341}
+  _SlotNum: 7
 --- !u!1 &1562184274
 GameObject:
   m_ObjectHideFlags: 0
@@ -24677,9 +24677,9 @@ MonoBehaviour:
   RavenInput: {fileID: 653158431}
   UI: {fileID: 43495280}
   AltarItems:
-  - {fileID: 11400000, guid: a123ca26c295c9b469c23e589c81e513, type: 2}
-  - {fileID: 11400000, guid: fac87496e6cb4ec45a89532eb77f8c14, type: 2}
-  - {fileID: 11400000, guid: 2fc2ac28884d4cd4abfc8910bd2e985a, type: 2}
+  - {fileID: 11400000, guid: 7a787a17f26852444a4745f8138da38c, type: 2}
+  - {fileID: 11400000, guid: 0cf7f98a76689c34f90e6a983d50b54e, type: 2}
+  - {fileID: 11400000, guid: cc6de6849d989094699ac9d62a5e00ad, type: 2}
   - {fileID: 11400000, guid: 48d37c14a36c54b44abfe880a71d6969, type: 2}
   _name: {fileID: 919079796}
   _icon: {fileID: 2012192061}
@@ -25720,10 +25720,10 @@ RectTransform:
   - {fileID: 570015557}
   m_Father: {fileID: 1206340715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 470, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644022423
 MonoBehaviour:
@@ -26267,9 +26267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1130672460}
+  _SlotNum: 3
 --- !u!1 &1675477591
 GameObject:
   m_ObjectHideFlags: 0
@@ -26539,10 +26539,10 @@ RectTransform:
   - {fileID: 851804023}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 610, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678504398
 MonoBehaviour:
@@ -28338,9 +28338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1181250392}
+  _SlotNum: 5
 --- !u!1 &1839722884
 GameObject:
   m_ObjectHideFlags: 0
@@ -29020,10 +29020,10 @@ RectTransform:
   - {fileID: 1675477592}
   m_Father: {fileID: 1206340715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 610, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943367104
 MonoBehaviour:
@@ -29556,10 +29556,10 @@ RectTransform:
   - {fileID: 1072604786}
   m_Father: {fileID: 377100870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 330, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956357238
 MonoBehaviour:
@@ -30864,9 +30864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 463782657}
+  _SlotNum: 10
 --- !u!1 &2032333657
 GameObject:
   m_ObjectHideFlags: 0
@@ -32357,9 +32357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8042d1dba299564bb2a03f1f9764928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotFarm
-  Inventory: {fileID: 0}
-  _SpawnPoint: {fileID: 0}
-  _SlotNum: 0
+  Inventory: {fileID: 1562184276}
+  _SpawnPoint: {fileID: 1371216197}
+  _SlotNum: 11
 --- !u!1 &2122256792
 GameObject:
   m_ObjectHideFlags: 0

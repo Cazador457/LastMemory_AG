@@ -7,19 +7,17 @@ public class SlotFarm : MonoBehaviour
     [SerializeField] private Transform _SpawnPoint;
     [SerializeField] private int _SlotNum;
     private GameObject _CurrentPlant;
-    //private Coroutine IsPlanted;
 
-    /*private void Awake()
-    {
-        _CurrentPlant = transform.GetChild(0).gameObject;
-    }*/
     public void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player"))
            return;
-
-        Inventory.SlotTerrain = _SlotNum;
-        Inventory.CanPlant = true;
+        if (other.CompareTag("Player"))
+        {
+            Inventory.SlotTerrain = _SlotNum;
+            Inventory.CanPlant = true;
+            Debug.Log("Update SlotNum");
+        }
     }
     public void OnTriggerExit(Collider other)
     {
@@ -51,7 +49,6 @@ public class SlotFarm : MonoBehaviour
     }
     IEnumerator PlantGrowing()
     {
-
         yield return new WaitForSeconds(2f);
     }
 }
